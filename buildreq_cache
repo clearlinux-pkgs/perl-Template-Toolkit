@@ -1,0 +1,5 @@
+2.29
+perl(AppConfig)
+perl(CGI)
+perl(HTML::Entities)
+perl(Test::LeakTrace)
