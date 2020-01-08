@@ -4,10 +4,10 @@
 #
 Name     : perl-Template-Toolkit
 Version  : 3.003
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/Template-Toolkit-3.003.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/Template-Toolkit-3.003.tar.gz
-Summary  : Perl template processing system
+Summary  : 'comprehensive template processing system'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 Requires: perl-Template-Toolkit-bin = %{version}-%{release}
@@ -20,66 +20,9 @@ BuildRequires : perl(HTML::Entities)
 BuildRequires : perl(Test::LeakTrace)
 
 %description
-Script          Testing
------------------------------------------------------------------------------
-args.t          Passing positional and named arguments to code/object methods
-autoform.t      Autoformat plugin (Template::Plugin::Autoformat)
-base.t          Template::Base.pm module
-binop.t         Binary operators
-block.t         BLOCK definition
-capture.t       Capture directive output and assign to a variable
-case.t          CASE option to switch case sensitivity
-cgi.t           CGI plugin (Template::Plugin::CGI)
-compile1.t      Compile templates to Perl code and save to file
-compile2.t      Reload above compiled templates without re-parsing
-compile3.t      Ensure that touching source template causes re-compilation
-compile4.t      Compiling templates to a COMPILE_DIR
-compile5.t      Reload templates from a COMPILE_DIR
-config.t        Template::Config factory module
-context.t       Template::Context module
-datafile.t      Datafile plugin (Template::Plugin::Datafile)
-date.t          Date plugin (Template::Plugin::Date)
-dbi.t           DBI plugin (Template::Plugin::DBI)
-directive.t     Directive layout, chomping, comments, etc.
-document.t      Template::Document module
-dom.t           XML::DOM plugin (Template::Plugin::XML::DOM)
-dumper.t        Data::Dumper plugin (Template::Plugin::Data::Dumper)
-error.t         Test that errors are reported back to caller as exceptions
-evalperl.t      Evaluation of PERL and RAWPERL blocks
-exception.t     Template::Exception module
-filter.t        FILTER directive and various filters
-foreach.t       FOREACH directive
-format.t        Format plugin (Template::Plugin::Format)
-include.t       INCLUDE and PROCESS directive
-iterator.t      Template::Iterator and Iterator plugin modules
-list.t          List definition and access via various methods
-macro.t         MACRO directive
-object.t        Binding objects to template variables
-output.t        OUTPUT_PATH and OUTPUT options
-parser.t        Template::Parser module
-plugins.t       Template::Plugins provider module (incomplete)
-process.t       PRE_PROCESS, PROCESS and POST_PROCESS options
-provider.t      Template::Provider module
-ref.t           Test the \ reference operator (currently undocumented)
-rss.t           XML::RSS plugin (Template::Plugin::XML::RSS)
-service.t       Template::Service module
-skel.t          Skeleton test file.  Copy and edit to create your own tests.
-stash.t         Template::Stash module
-stop.t          STOP directive and throwing 'stop' exception
-switch.t        SWITCH / CASE directives
-table.t         Table plugin (Template::Plugin::Table)
-tags.t          TAGS directive
-template.t      Template front-end module
-text.t          Plain text blocks, ensuring all characters are reproducable
-try.t           TRY / THROW / CATCH / FINAL directives
-url.t           URL plugin (Template::Plugin::URL)
-vars.t          Variable usage and GET / SET / CALL / DEFAULT directives
-varsv1.t        As above, using version 1 handling of leading '$'
-vmeth.t         Virtual scalar/hash/list methods
-while.t         WHILE directive
-wrap.t          Wrap plugin (Template::Plugin::Wrap)
-wrapper.t       WRAPPER directive
-xpath.t         XML::XPath plugin (Template::Plugin::XML::XPath)
+----------------------------------------------------------------------
+Template::Stash::XS					  August 2001
+----------------------------------------------------------------------
 
 %package bin
 Summary: bin components for the perl-Template-Toolkit package.
@@ -94,7 +37,6 @@ Summary: dev components for the perl-Template-Toolkit package.
 Group: Development
 Requires: perl-Template-Toolkit-bin = %{version}-%{release}
 Provides: perl-Template-Toolkit-devel = %{version}-%{release}
-Requires: perl-Template-Toolkit = %{version}-%{release}
 Requires: perl-Template-Toolkit = %{version}-%{release}
 
 %description dev
@@ -237,69 +179,69 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Base.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Config.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Constants.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Context.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Directive.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Document.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Exception.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/FAQ.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Filters.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Grammar.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Iterator.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Manual.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Manual/Config.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Manual/Credits.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Manual/Directives.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Manual/Filters.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Manual/Internals.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Manual/Intro.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Manual/Plugins.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Manual/Syntax.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Manual/VMethods.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Manual/Variables.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Manual/Views.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Modules.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Namespace/Constants.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Parser.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/Assert.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/CGI.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/Datafile.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/Date.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/Directory.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/Dumper.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/File.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/Filter.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/Format.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/HTML.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/Image.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/Iterator.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/Math.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/Pod.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/Procedural.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/Scalar.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/String.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/Table.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/URL.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/View.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugin/Wrap.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Plugins.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Provider.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Service.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Stash.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Stash/Context.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Stash/XS.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Test.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Toolkit.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Tools.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Tools/tpage.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Tools/ttree.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Tutorial.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Tutorial/Datafile.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/Tutorial/Web.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/VMethods.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Template/View.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/auto/Template/Stash/XS/XS.so
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Base.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Config.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Constants.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Context.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Directive.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Document.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Exception.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/FAQ.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Filters.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Grammar.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Iterator.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Manual.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Manual/Config.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Manual/Credits.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Manual/Directives.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Manual/Filters.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Manual/Internals.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Manual/Intro.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Manual/Plugins.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Manual/Syntax.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Manual/VMethods.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Manual/Variables.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Manual/Views.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Modules.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Namespace/Constants.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Parser.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/Assert.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/CGI.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/Datafile.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/Date.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/Directory.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/Dumper.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/File.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/Filter.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/Format.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/HTML.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/Image.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/Iterator.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/Math.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/Pod.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/Procedural.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/Scalar.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/String.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/Table.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/URL.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/View.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugin/Wrap.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Plugins.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Provider.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Service.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Stash.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Stash/Context.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Stash/XS.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Test.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Toolkit.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Tools.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Tools/tpage.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Tools/ttree.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Tutorial.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Tutorial/Datafile.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/Tutorial/Web.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/VMethods.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Template/View.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/auto/Template/Stash/XS/XS.so
