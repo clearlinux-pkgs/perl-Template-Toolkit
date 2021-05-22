@@ -4,7 +4,7 @@
 #
 Name     : perl-Template-Toolkit
 Version  : 3.009
-Release  : 14
+Release  : 15
 URL      : https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/Template-Toolkit-3.009.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/Template-Toolkit-3.009.tar.gz
 Summary  : 'comprehensive template processing system'
