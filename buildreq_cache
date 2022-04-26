@@ -1,5 +1,3 @@
-3.010
+3.100
 perl(AppConfig)
-perl(CGI)
-perl(HTML::Entities)
 perl(Test::LeakTrace)
