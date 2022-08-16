@@ -1,5 +1,5 @@
 PKG_NAME := perl-Template-Toolkit
-URL = https://cpan.metacpan.org/authors/id/T/TO/TODDR/Template-Toolkit-3.100.tar.gz
+URL = https://cpan.metacpan.org/authors/id/A/AB/ABW/Template-Toolkit-3.101.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
