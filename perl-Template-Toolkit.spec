@@ -4,7 +4,7 @@
 #
 Name     : perl-Template-Toolkit
 Version  : 3.101
-Release  : 22
+Release  : 23
 URL      : https://cpan.metacpan.org/authors/id/A/AB/ABW/Template-Toolkit-3.101.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/A/AB/ABW/Template-Toolkit-3.101.tar.gz
 Summary  : 'comprehensive template processing system'
