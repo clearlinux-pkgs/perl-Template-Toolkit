@@ -7,7 +7,7 @@
 #
 Name     : perl-Template-Toolkit
 Version  : 3.102
-Release  : 26
+Release  : 27
 URL      : https://cpan.metacpan.org/authors/id/T/TO/TODDR/Template-Toolkit-3.102.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/T/TO/TODDR/Template-Toolkit-3.102.tar.gz
 Summary  : 'comprehensive template processing system'
